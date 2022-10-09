@@ -1,0 +1,23 @@
+package Day29;
+
+import java.util.Scanner;
+
+public class ComputAreaWithConsoleInput {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number for radius (double): ");
+
+        double radius = input.nextDouble();
+        double area = radius * radius * 3.14159;
+
+        System.out.println("radius = " + radius);// yaricap
+        System.out.println("The Area of the Circle of radius = " + radius +" is "+ area);// Dairenin alani
+
+
+
+
+
+    }
+}
