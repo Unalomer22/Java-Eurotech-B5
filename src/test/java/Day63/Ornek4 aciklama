@@ -1,0 +1,6 @@
+Ornek4 teki hatanın sebebi malum nextInt() ile değer okunduğunda ve enter a basıldığında klavye bufferında kalan "newline"
+karakterinin bufferdan boşaltılmamış olmasından dolayı program sürekli "InputMismatchException" catch bloğu içerine sonsuz bir loop olarak girer.
+Çözümü olarak InputMismatchException catch bloğu içeisinde nextLine() kullanılarak bufferın boşaltılması gerekir.
+
+Bu tür problemlerle karşılaşmamak için tavsiye edilen haliyle nextInt() yerine veriyi nextLine() ile okuyup ihtiyaç duyulan veritipine dönüştürmek
+ için ilgili wrapper class kullanılmalıdır. Örnek koddaki gibi eğer bize integer veri tipi lazımsa Integer.parseInt() metodu ile klavyeden okunan veri integer a çevrilmelidir.
